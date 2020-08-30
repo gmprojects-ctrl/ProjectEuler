@@ -1,11 +1,9 @@
 #include<stdio.h>
-#include<stdlib.h>
-#include<math.h>
-long double ecd(long a , long b)
+int ecd(int a , int b)
 /* My implementation of Euclid algrothim */
 /* Note a must be greater than b*/
 {
-    long double c=fmod(a,b);
+    int c=a%b;
     if(c==0)
     {
         return b;
@@ -19,14 +17,14 @@ long double ecd(long a , long b)
         return ecd(b,c);
     }
 }
-long double findp(long double limit)
+int findp(int limit)
 {
-	long double product=1;
-	long double counter=0;
-	long double i=1;
+	int product=1;
+	int counter=0;
+	int i=1;
 	while(counter != limit)
 	{
-		long double y=ecd(product,i);
+		int y=ecd(product,i);
 		if(y==1)
 		{
 			counter+=1;
@@ -40,5 +38,5 @@ long double findp(long double limit)
 }
 int main()
 {
-	printf("%f\n",findp(10001));
+	printf("%d\n",findp(10001));
 }
