@@ -19,9 +19,9 @@ int ecd(int a , int b)
 }
 int findp(int limit)
 {
-	int product=1;
+	int product=2;
 	int counter=0;
-	int i=1;
+	int i=2;
 	while(counter != limit)
 	{
 		int y=ecd(product,i);
