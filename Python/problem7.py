@@ -8,9 +8,9 @@ def ecd(a,b):
         return ecd(b,c)
 
 def findprime(limit):
-    i=1
+    i=2
     counter=0
-    product=1
+    product=2
     while(counter != limit):
         if(ecd(product,i)==1):
             counter+=1
